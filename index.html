@@ -4,24 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
     <title>Международный васюкинский турнир по шахматам</title>
 </head>
 
 <body>
+    <!--HEADER START-->
     <header class="header">
         <div class="_container">
-            <img src="images/logo.png" alt="" class="logo">
-            <p class="title">Превратите уездный город в столицу земного шара</p>
-            <p class="text">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам
-            </p>
-            <div class="buttons">
-                <button class="button">Поддержать шахматную мысль</button>
-                <button class="button">Подробнее о турнире</button>
-            </div>
+            <div class="header__bg">
+                <img src="images/logo.png" alt="" class="logo">
+                <div class="headerContent _container__headerContent ">
+                    <p class="title">Превратите уездный город</p>
+                    <p class="title title--right">в столицу земного шара</p> 
+                    <p class="text">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам
+                    </p>
+                    <div class="buttons">
+                        <button class="button yellow button--bg">Поддержать <br> шахматную мысль</button>
+                        <button class="button black">Подробнее <br> о турнире</button>
+                    </div>
+                </div>
+            </div>  
         </div>
     </header>
+    <!--HEADER END-->
+    <!--MAIN START-->
+    <main class="main">
+        <div class="_container">
+            <div class="items-wrap">
+                <div class="items marquee">
+                    <div class="item">Шахматы двигают вперёд не только культуру, но и экономику!</div>
+                    <div class="item">Лёд тронулся, господа присяжные заседатели!</div>
+                    <div class="item">                    Дело помощи утопающим — дело рук самих утопающих!</div>
+                </div>
+                <div aria-hidden="true" class="items marquee">
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>

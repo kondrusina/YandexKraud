@@ -1,10 +1,140 @@
+@font-face {
+
+}
+
 ._container {
-    max-width: 1920px;
+    max-width: 1366px;
     margin: 0 auto;
 }
 
-.header {
-    background-image: url(images/bg.png);
-    padding-left: 3.75%;
-    padding-top: 1.61%;
+.header__bg {
+    background: 
+    url(/images/bg.png) 45% 0% no-repeat fixed,
+    url(/images/bg_grey.png) 0% 0% no-repeat fixed;
+    padding-left: 5.27%;
+    padding-top: 1.90%;
+    padding-bottom: 9.66%;
 }
+.headerContent {
+    max-width: 41.88%;
+}
+._container__headerContent {
+    margin-top: 4.79%;
+}
+.title {
+    font-family: "Merriweather", serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 66px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: center;
+    color: #313131;
+}
+.title--right {
+    text-align: center;
+    margin-bottom:4.48%;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 7.38%;
+}
+.button{
+    border-radius:66px;
+    width:48.5%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    padding:3.7% 9%;
+    border: 2px solid #1F1F1F;
+    color: #1F1F1F;
+    background-color:#E9DED4;
+}
+.button--bg {
+    background: #1F1F1F;
+    color: #FFFFFF;
+}
+
+.yellow:hover {
+    background-color:rgba(251, 206, 81, 1);
+    border: none;
+    transition-duration: 1s;
+}
+.black:hover {
+    background: rgba(31, 31, 31, 1);
+    transition-duration: 1s;
+    color: rgba(255, 255, 255, 1);
+
+}
+/*БЕГУЩАЯ СТРОКА НАЧАЛО*/
+.items-wrap {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+
+}
+.items-wrap:before,
+.items-wrap:after {
+    content: "";
+    height: 100%;
+    top: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+}
+.items-wrap:before {
+    left: 0;
+    background:#F54932;
+}
+.items-wrap:after {
+    right: 0;
+}
+.items {
+    flex-shrink: 0;
+    display: flex;
+    gap: 20px;
+    counter-reset: item;
+    justify-content: space-around;
+    min-width: 100%;
+}
+.item {
+    flex: 0 0 auto;
+    counter-increment: item;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 400;
+    transition: all 0.1s ease-in-out;
+}
+.item:hover {
+    transform: scale(1.05);
+    
+}
+.marquee {
+    animation: scroll 20s linear infinite;
+}
+
+.items-wrap:hover .marquee {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 20px));
+    }
+  }
+  /*БЕГУЩАЯ СТРОКА КОНЕЦ*/
